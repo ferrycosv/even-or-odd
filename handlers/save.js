@@ -16,6 +16,7 @@ function saveHandler() {
       strings.NaNy.pop();
       alert("Value already saved");
     }
+    nanyHandler();
   } else {
     // check if is even or odd
     if (checkNumber % 2 === 0) {
@@ -24,12 +25,14 @@ function saveHandler() {
         strings.evens.pop();
         alert("Value already saved");
       }
+      evensHandler();
     } else {
       strings.odds.push(checkNumber);
       if (hasDuplicates(strings.odds)) {
         strings.odds.pop();
         alert("Value already saved");
       }
+      oddsHandler();
     }
   }
   document.getElementById("input").value = '';
